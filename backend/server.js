@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use("/api/products", productRoutes);
 
+app.get("/",(req,res)=>{
+res.send("Vastraa API Running");
+});
+
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });
